@@ -16,6 +16,7 @@ break;
 }
 }
 }
+//printing whether the number given is prime or not
 if (isPrime) {
 System.out.println(number + " is a Prime number.");
 } else {

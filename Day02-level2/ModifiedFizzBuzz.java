@@ -6,6 +6,7 @@ System.out.print("Enter a positive number: ");
 int num = input.nextInt();
 if (num > 0) {
 int i = 1;
+//loop to check whether the given num is divisible by 3,5 or both
 while (i <= num) {
 if (i % 3 == 0 && i % 5 == 0) {
 System.out.println("FizzBuzz");
@@ -21,6 +22,7 @@ i++;
 } else {
 System.out.println("Please enter a valid integer.");
 }
+//closing the scanner stream
 input.close();
 }
 }
