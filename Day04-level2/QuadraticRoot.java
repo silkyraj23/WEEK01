@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class QuadraticRoot {
     public static double[] findRoot(double a, double b, double c) {
         double delta = Math.pow(b, 2) - 4 * a * c;
