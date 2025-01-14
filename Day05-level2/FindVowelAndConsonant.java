@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.lang.String;
 
-public class findVowelAndConsonant {
+public class FindVowelAndConsonant {
 	// method to check current char is vowel, consonant or not a letter
 	public static void check(String string, String result[][]) {
 		for (int i = 0; i < string.length(); i++) {
@@ -49,3 +49,6 @@ public class findVowelAndConsonant {
 		input.close();
 	}
 }
+	
+	
+	

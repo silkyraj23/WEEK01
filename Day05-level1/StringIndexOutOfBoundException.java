@@ -1,5 +1,6 @@
 import java.util.Scanner;
 public class StringIndexOutOfBoundException{
+    //we will try to access the invalid index of string
     public static char stringIndexOutOfBound(String str)
     {
         return str.charAt(str.length());
@@ -13,9 +14,12 @@ public class StringIndexOutOfBoundException{
         try{
             char stringIndexOutOfBound = stringIndexOutOfBound(str);
         }
+        //catch block get executed after exceotion occur
         catch(StringIndexOutOfBoundsException e)
         {
             System.out.println(e + " is found");
         }
+        //closing the input stream
+        input.close();
     }
 }

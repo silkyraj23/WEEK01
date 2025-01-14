@@ -1,7 +1,17 @@
 import java.util.Scanner;
 import java.lang.String;
-
 public class CompareStrings {
+    public static boolean compareString(String first, String second) {
+        if (first.length() != second.length()) {
+            return false;
+        }
+        for (int i = 0; i < first.length(); i++) {
+            if (first.charAt(i) != second.charAt(i)) {
+                return false;
+            }
+        }
+        return true;
+    }
     public static void main(String[] args) {
         // instance of Scanner class to take input from user
         Scanner input = new Scanner(System.in);
@@ -18,17 +28,5 @@ public class CompareStrings {
         } else {
             System.out.println("Result are not same");
         }
-    }
-
-    public static boolean compareString(String first, String second) {
-        if (first.length() != second.length()) {
-            return false;
-        }
-        for (int i = 0; i < first.length(); i++) {
-            if (first.charAt(i) != second.charAt(i)) {
-                return false;
-            }
-        }
-        return true;
     }
 }
