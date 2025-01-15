@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import.java.lang.String;
+import java.lang.String;
 public class DisplayCalendar{
     // Method to get the name of the month
     public static String getMonthName(int month) {
