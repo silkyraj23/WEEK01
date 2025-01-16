@@ -1,42 +1,30 @@
 import java.util.Scanner;
-public class FindFirstNonRepeatingCharacter {
-    // Method to find the first non-repeating character in a string
-    public static char findFirstNonRepeatingCharacter(String str) {
-        int[] frequency = new int[256]; // Array to store frequency of characters (ASCII size)
-
-        // Loop to count frequency of each character in the string
-        for (int i = 0; i < str.length(); i++) {
-            char currentChar = str.charAt(i);
-            frequency[currentChar]++; // Increment the count for the current character
-        }
-
-        // Loop through the string again to find the first non-repeating character
-        for (int i = 0; i < str.length(); i++) {
-            char currentChar = str.charAt(i);
-            if (frequency[currentChar] == 1) { // If frequency is 1, it's non-repeating
-                return currentChar; // Return the first non-repeating character
+import java.lang.String;
+public class CountVowelAndConsonants{
+    public static void countVowelAndConsonant(String string , int vowel , int consonant){
+        for(int i=0;i<string.length();i++){
+            char curr=string.charAt(i);
+            if(curr=='a' || curr=='e' || curr=='i' ||curr=='o'||curr=='u' || curr=='A' || curr=='E' || curr=='I' ||curr=='O'||curr=='U'){
+            vowel++
+            }
+            else{
+            consonant++
             }
         }
-        //Return '\0' character if no non-repeating character is found
-        return '\0'; 
     }
-    //main method
-    public static void main(String[] args) {
-        //creating the instance of scanner class
-        Scanner input = new Scanner(System.in);
-        // Take user input for the string
-        System.out.print("Enter a string: ");
-        String inputString = input.nextLine();
-        // Call the method to find the first non-repeating character
-        char result = findFirstNonRepeatingCharacter(inputString);
-        // Display the result
-        if (result != '\0') {
-            System.out.println("The first non-repeating character is: " + result);
-        }else {
-            System.out.println("There is no non-repeating character in the string.");
-        }
-        //closing the input stream
-        input.close();
-      
-    }
+    
+public static void main(String[] args){
+//creating the instance of scanner class
+Scanner input= new Scanner(System.in);
+//taking input from user
+System.out.println("Enter a string : ");
+String string=input.next();
+int vowel=0;
+int consonant=0;
+//calling function to calculate vowel and consonant
+countVowelAndConsonant(string,vowel,consonant);
+System.out.println("The count of Vowel is " + vowel +" and the count of consonant is " + count );
+//closing the input stream
+input.close()
+}
 }
